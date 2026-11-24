@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apex Journal - articles on design and development">
+  <title>Apex Journal</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/api.js" defer></script>
+  <script src="/js/auth.js" defer></script>
+  <script src="/js/posts.js" defer></script>
+  <script src="/js/app.js" defer></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="/index.html">Apex<span>Journal</span></a>
+      <div class="nav-actions">
+        <button class="theme-button" type="button" data-theme-toggle aria-label="Toggle theme">◐</button>
+        <div data-auth-nav></div>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Ideas for modern builders</p>
+      <h1>Stories about the web we make.</h1>
+    </section>
+    <section class="filters" aria-label="Post filters">
+      <div class="search-field"><label for="search">Search posts</label><input id="search" type="search" placeholder="Search by title or topic" data-search></div>
+      <div><label for="category">Category</label><select id="category" data-category><option value="">All categories</option><option>Design</option><option>Backend</option><option>JavaScript</option><option>CSS</option><option>Database</option><option>Security</option></select></div>
+      <div><label for="sort">Sort</label><select id="sort" data-sort><option value="newest">Newest</option><option value="oldest">Oldest</option></select></div>
+    </section>
+    <p id="list-status" class="status" data-list-status hidden></p>
+    <div class="post-grid" data-post-grid></div>
+    <nav class="pagination" data-pagination aria-label="Pagination"></nav>
+  </main>
+  <footer class="footer"><div class="container">Apex Journal · Built for the web</div></footer>
+</body>
+</html>
